@@ -71,8 +71,27 @@ def search():
 
 
 def update():
-    confi_student = 
-    student.update()
+        ve = False
+        while not ve:
+            try:
+                confi_student={}
+                nn = int(input("Write the number of the registry: "))
+                id = int(input("Write the ID number: "))
+                if id < 0:
+                    add()
+                name = str(input("Write the full name: "))
+                age = int(input("Wirte the age: "))
+                if age < 0:
+                    add()
+                course = str(input("Write name of the course or program: "))
+                state = str(input("Write the student's status (active/inactive): "))
+                if state != "active" and state !="inactive":
+                    add()
+                confi_student [nn]= {"id":id, "name":name, "age":age, "course":course, "state":state}
+                student.update(confi_student)
+                print(student)
+            except:
+                print("INVALID INPUT!!!")
 
     
 
