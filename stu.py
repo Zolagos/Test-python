@@ -1,16 +1,37 @@
 # REgistrar, consultar, actualizar, eliminar estudiantes
 #ID, nombre, Edad, curso o programa, estado(activo/inactivo)
 
-student={}
+
+student={
+    1:{
+        "id": 1001820882,
+        "name": "Sharon Merino",
+        "age": 25,
+        "course": "engineering",
+        "state": "active"
+    }}
 
 def menu ():
-    opt = input("Write the option:\n 1.Add\n 2.Search\n 3.Ref\n 4.Remove\n 5.Exit\n")
-    opt = opt.lower().strip()
-
+    c = 1
+    opt = ""
+    while opt !="exit":
+        opt = input("Write the option:\n 1.Add\n 2.Search\n 3.Ref\n 4.Remove\n 5.Exit\n")
+        opt = opt.lower().strip()
+        if opt == "add":
+            c=add(c)
+        elif opt == "search":
+            search()
+        #elif opt == ""
+        elif opt == "remove":
+            remove()
+        elif opt == "exit":
+            print("Exit menu!")
+        else:
+            print("INVALID OPTION!!!\n")
 
 
 def add():
-    c = 0
+    
     ve = False
     while not ve:
         try:
@@ -19,12 +40,14 @@ def add():
             age = int(input("Wirte the age: "))
             course = str(input("Write name of the course or program: "))
             state = str(input("Write the student's status (active/inactive): "))
-            c+=1
-            student = {c:{"id":id, "name":name, "age":age, "course":course, "state":state}}
+            contad+=1
+            student[contad] ={"id":id, "name":name, "age":age, "course":course, "state":state}
             print(student)
             ve = True
         except:
             print("INVALID INPUT!!!")
+
+    return contad
         
 def search():
     
@@ -40,3 +63,6 @@ def search():
 def remove():
     rem = int(input("Write the number of the registry you want to remove"))
     del(student[rem])
+
+
+menu()
