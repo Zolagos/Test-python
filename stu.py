@@ -76,8 +76,6 @@ def update():
             try:
                 confi_student={}
                 nn = int(input("Write the number of the registry: "))
-                if nn is not student:
-                    print("Registration number not found\n")
                 id = int(input("Write the ID number: "))
                 if id < 0:
                     add()
@@ -92,6 +90,7 @@ def update():
                 confi_student [nn]= {"id":id, "name":name, "age":age, "course":course, "state":state}
                 student.update(confi_student)
                 print(student)
+                student
                 ve = True
             except:
                 print("INVALID INPUT!!!")
