@@ -32,9 +32,9 @@ def menu ():
 
 def add(cont):
     ve = False
-    cont = 1
     while not ve:
         try:
+            confi_student = {}
             id = int(input("Write the ID number: "))
             if id < 0:
                 add()
@@ -46,8 +46,9 @@ def add(cont):
             state = str(input("Write the student's status (active/inactive): "))
             if state != "active" and state !="inactive":
                 add()
-            cont = cont + 1
-            student[cont] ={"id":id, "name":name, "age":age, "course":course, "state":state}
+            cont=cont+1
+            confi_student[cont]={"id":id, "name":name, "age":age, "course":course, "state":state}
+            student.update(confi_student)
             print(student)
             ve = True
         except:
@@ -90,6 +91,7 @@ def update():
                 confi_student [nn]= {"id":id, "name":name, "age":age, "course":course, "state":state}
                 student.update(confi_student)
                 print(student)
+                ve = True
             except:
                 print("INVALID INPUT!!!")
 
