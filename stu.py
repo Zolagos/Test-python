@@ -30,7 +30,8 @@ def menu ():
             print("INVALID OPTION!!!\n")
 
 
-def add(cont):
+def add(count):
+    global c
     ve = False
     while not ve:
         try:
@@ -45,13 +46,13 @@ def add(cont):
             state = str(input("Write the student's status (active/inactive): "))
             if state != "active" and state !="inactive":
                 add()
-            cont+=1
+            c+=1
             student[c]={"id":id, "name":name, "age":age, "course":course, "state":state}
             print(student)
             ve = True
         except:
             print("INVALID INPUT!!!\n")
-    return cont
+    return c
     
         
 def search():
@@ -75,6 +76,8 @@ def update():
             try:
                 confi_student={}
                 nn = int(input("Write the number of the registry: "))
+                if nn is not student:
+                    print("Registration number not found\n")
                 id = int(input("Write the ID number: "))
                 if id < 0:
                     add()
