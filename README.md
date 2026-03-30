@@ -12,9 +12,9 @@ at the beginning you will be shown a menu where you will have to write what you 
 
 ## Project Structure
 Functions were used for greater organization of the project:
-menu()
-add()
-search()
-Update()
-Remove()
+- menu()
+- add()
+- search()
+- Update()
+- Remove()
 
