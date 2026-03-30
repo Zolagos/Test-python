@@ -1,17 +1,17 @@
 # Test-python
 ## Student Management System with Data Persistence
-es un sistema de gestion de datos de estudiantes de una isntitucion educativa que permita añadir, buscar, actualizar y eliminar estudiantes 
+It is a student data management system of an educational institution that allows adding, searching, updating and deleting students.
 
 ## How to use
-al inicio se te mostrara un menu donde tendras que escribir lo que deseas hacer
-1. Add = te permite añadir un estudiante y te solicita los datos: id, name, age, course and state.
-2. search = te permite buscar un estudiante mediente el numero de registro
-3. Update = ter permite actualizar los datos de un estudiante
-4. remove = te permite eliminar a un estudiante mediante su registro
-5. exit
+at the beginning you will be shown a menu where you will have to write what you want to do 
+1. Add = allows you to add a student and requests the data: id, name, age, course and state.
+2. Search = allows you to search for a student using the registration number
+3. Update = ter allows you to update a student's data
+4. Remove = allows you to delete a student by registering them
+5. Exit
 
 ## Project Structure
-Se utilizaron funciones para una mayor organizacion del proyecto
+Functions were used for greater organization of the project:
 menu()
 add()
 search()
