@@ -34,7 +34,6 @@ def add(cont):
     ve = False
     while not ve:
         try:
-            confi_student = {}
             id = int(input("Write the ID number: "))
             if id < 0:
                 add()
@@ -46,9 +45,8 @@ def add(cont):
             state = str(input("Write the student's status (active/inactive): "))
             if state != "active" and state !="inactive":
                 add()
-            cont=cont+1
-            confi_student[cont]={"id":id, "name":name, "age":age, "course":course, "state":state}
-            student.update(confi_student)
+            cont+=1
+            student[c]={"id":id, "name":name, "age":age, "course":course, "state":state}
             print(student)
             ve = True
         except:
